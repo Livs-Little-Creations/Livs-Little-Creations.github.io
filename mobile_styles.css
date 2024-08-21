@@ -1,0 +1,68 @@
+
+/* Mobile Styles */
+.centered-line {
+  text-align: center;
+  margin-top: 20px;
+}
+.social-icon {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #9A76C1;
+  text-decoration: none;
+}
+@font-face {
+  font-family: 'SF Pro Display', sans-serif;
+  src: url('Fonts/SFProDisplay-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+.spacers {
+    color:#f6ecfd
+}
+.image-caption-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+.image-caption-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+.image-caption-container .caption {
+  max-width: 100%;
+  font-family: 'SF Pro Display', sans-serif;
+  color: #9A76C1;
+  padding: 10px;
+  text-align: center;
+}
+.image-left .caption {
+  order: 2;
+}
+.image-left img {
+  order: 1;
+}
+.image-right .caption {
+  order: 1;
+}
+.image-right img {
+  order: 2;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 18pt;
+    margin: 0 10px;
+  }
+  .image-caption-container {
+    flex-direction: column;
+  }
+  .image-caption-container img {
+    margin: 0 auto;
+  }
+  .centered-line {
+    margin-top: 10px;
+  }
+}

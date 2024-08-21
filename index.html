@@ -10,7 +10,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Liv's Little Creations</title>
   <link rel="shortcut icon" type="image/x-icon" href="FAVICON.ico">
+
+  <!-- Desktop Stylesheet -->
+  <link rel="stylesheet" href="desktop-styles.css" id="mainStylesheet">
+  
   <style>
+    /* General styles shared between both versions */
     .centered-line {
       text-align: center;
       margin-top: 20px;
@@ -30,36 +35,16 @@
     .spacers {
         color:#f6ecfd
     }
-    .image-caption-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 20px 0;
-    }
-    .image-caption-container img {
-      max-width: 720px; /* Increased size */
-      margin: 10px;
-    }
-    .image-caption-container .caption {
-      max-width: 1080px;
-      font-family: 'SF Pro Display', sans-serif;
-      color: #9A76C1;
-      padding: 10px;
-    }
-    .image-left .caption {
-      order: 2;
-    }
-    .image-left img {
-      order: 1;
-    }
-    .image-right .caption {
-      order: 1;
-    }
-    .image-right img {
-      order: 2;
-    }
   </style>
+
   <script src="https://kit.fontawesome.com/39ffdb166a.js" crossorigin="anonymous"></script>
+  <script>
+    // Detect if the device is mobile and switch the stylesheet if necessary
+    if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|webOS|Windows Phone|Kindle|Silk|BB10/i.test(navigator.userAgent)) {
+        // Load mobile-specific styles
+        document.getElementById('mainStylesheet').setAttribute('href', 'mobile-styles.css');
+    }
+  </script>  
 </head>
 
 <body style="background-color:#f6ecfd;">
